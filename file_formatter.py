@@ -8,7 +8,7 @@ exclude_folders = ["Plugins", "Testing"]
 def format_name(name):
     return name.lower().replace("-", " ")
 
-def folder_iter_2(path):
+def folder_iter(path):
     with os.scandir(path) as parent_entries:
         for entry in parent_entries:
             if entry.is_file():
@@ -22,4 +22,4 @@ def folder_iter_2(path):
                         print("formatting " + entry.path + "\\" + child_entry.name + " to " + entry.path + "\\" + format_name(child_entry.name))
 
 if __name__ == "__main__":
-    folder_iter_2(code_folder)
+    folder_iter(code_folder)
