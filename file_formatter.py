@@ -3,7 +3,7 @@
 import os
 
 code_folder = os.getcwd()
-exclude_folders = ["Plugins", "Testing"]
+exclude_folders = []# folders to not format
 
 def format_name(name):
     return name.lower().replace("-", " ")
